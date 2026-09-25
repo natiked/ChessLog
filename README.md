@@ -8,7 +8,6 @@ Chesslog is a basic chess journaling platform to log your wins and losses, and h
 
 To start logging your chess games for **FREE** click on the link above and create an account !
 
----
 
 ## The cool features available
 - A secure login portal that uses JWT to authenticate your credentials
@@ -17,7 +16,6 @@ To start logging your chess games for **FREE** click on the link above and creat
 - Knowing your career win rate
 - Adding keywords to your logs 
 
----
 
 ## How to run it locally?
 
@@ -50,7 +48,6 @@ This project implements things like lazy state initialization to avoid disk read
 
 Additionally, I used SQL transactions to insert logs into the database. This allows that logs inputted by the user will always end up being fully added or completely cancelled. This is very important because without using transactions modifying different connected tables may cause errors incase one operation fails. I also implemented a vercel.json file so that vercel doesn't respond with 404 status code when users reload the page. This is one of the major issue I've noticed from my previous project. Since I built a single page application with react-router handling different routes, requesting the dashboard or some route without being inside the page or even reloading the page wouldn't be possible because react needs to rerender the page every time a request is made using javascript rather than sending a new HTML.
 
----
 ## Acknowledgment
 
 This project wouldn't have been live without Render, Vercel and Neon. I deployed the backend on Render's free plan, the frontend on vercel and the database on Neon. 
